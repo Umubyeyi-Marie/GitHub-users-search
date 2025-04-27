@@ -94,7 +94,7 @@ export default function DisplayInfo() {
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:justify-between">
                     <div>
-                      <h2 className="font-bold text-2xl">{user.name || "No Name"}</h2>
+                      <h2 className="font-bold text-2xl">{user.name || ""}</h2>
                       <p className="text-blue-500">@{user.login}</p>
                     </div>
                     <time className="text-gray-400 text-sm">
@@ -128,7 +128,7 @@ export default function DisplayInfo() {
               {/* Bottom Links */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <p className="flex items-center gap-2">
-                  <FaMapMarkerAlt /> {user.location || 'Not Available'}
+                  <FaMapMarkerAlt /> {user.location || ''}
                 </p>
                 <p className="flex items-center gap-2">
                   <FaLink />
@@ -147,10 +147,10 @@ export default function DisplayInfo() {
                 </p>
                 <p className="flex items-center gap-2">
                   <FaTwitter />
-                  {user.twitter_username ? `@${user.twitter_username}` : 'Not Available'}
+                  {user.twitter_username ? `@${user.twitter_username}` : ''}
                 </p>
                 <p className="flex items-center gap-2">
-                  <FaBuilding /> {user.company || 'Not Available'}
+                  <FaBuilding /> {user.company ||''}
                 </p>
               </div>
 
